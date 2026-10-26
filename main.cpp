@@ -65,6 +65,8 @@ int main() {
 
         if (field[userRow][userColumn] == "~") {
             field[userRow][userColumn] = turnChar;
+        } else {
+            cout << "This cell is already filled" << endl;
         }
 
         for (auto &subitem: field) {
