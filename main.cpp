@@ -35,6 +35,15 @@ string check(string s) {
     return "*";
 }
 
+void printArea() {
+    for (auto &subitem: field) {
+        for (auto &item: subitem) {
+            cout << item << "\t";
+        }
+        cout << endl;
+    }
+}
+
 int main() {
     for (auto &subitem: field) {
         for (auto &item: subitem) {
@@ -69,12 +78,7 @@ int main() {
             cout << "This cell is already filled" << endl;
         }
 
-        for (auto &subitem: field) {
-            for (auto &item: subitem) {
-                cout << item << "\t";
-            }
-            cout << endl;
-        }
+        printArea();
 
         cout << endl;
 
@@ -84,7 +88,7 @@ int main() {
         } else if (check("X") == "X") {
             cout << "WIN X" << endl;
             break;
-        } else if (check("*") == "*" and hod == 9)  {
+        } else if (check("*") == "*" and hod == 9) {
             cout << "DRAW" << endl;
         }
 
